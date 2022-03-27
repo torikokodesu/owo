@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+	        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	        <title>ur my universe</title>
+	        <link rel="shortcut icon" type="image/gif" href="icons/favicon01.gif"/>
+	        <link rel="stylesheet" type="text/css" href="style.css">
+	        <link id="pagestyle" rel="stylesheet" type="text/css" title="lack" href="theme_01.css">
+	        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	        <script type="text/javascript">
+		$(document).ready(function() {
+		      function updateDate() {
+		      var m = new Date();
+		      var n = m.getMonth() + 1;
+		      var dateString = ("0" + m.getDate()).slice(-2) + " " + ("0" + n).slice(-2)  + " " + ("0" + m.getYear()).slice(-2)                
+		                   document.getElementById('date').innerHTML = dateString;
+		       }
+		       updateDate();
+		});
+		function swapStyleSheet(sheet){
+			document.getElementById('pagestyle').setAttribute('href', sheet);
+		}
+		if (localStorage.getItem('css')) {
+			swapStyleSheet(localStorage.getItem('css'));
+		}
+		function swapStyleSheet(sheet){
+			document.getElementById('pagestyle').setAttribute('href', sheet);
+			localStorage.setItem('css', sheet);
+		}
+	        </script>
+	</head>
+
+	<body>
+		<div id="container">
+	                            <div class="form">
+	                           		<input  id="searchbox" name="q" type="text" autocomplete="off" class="cleardefault" maxlength="100"   placeholder="hmmm..." size="17" autofocus="autofocus" />
+	                            </div>
+	                            <div class="buttons">
+	                            	<button onclick="swapStyleSheet('theme_01.css')" id="first_btn"></button>
+	                            	<button onclick="swapStyleSheet('theme_02.css')" id="second_btn"></button>
+	                            	<button onclick="swapStyleSheet('theme_03.css')" id="third_btn"></button>
+	                            </div>
+			<div class="profile">
+				<div class="avatar"></div>
+				<div class="user">
+					<div id="twitter">
+						<a href="https://www.twitter.com">TWITTER</a>
+					</div>
+					<div id="social">
+						<a href="https://discord.com/channels/@me">社会的</a>
+					</div>
+					<div id="school">
+						<a href="https://www.youtube.com">見る</a>
+					</div>
+					<div id="date">
+				
+					</div>
+				</div>
+			</div>
+			<div class="main">
+				<div class="column">
+					<a href="http://pinterest.com/">
+						<div  id="picture1" class="picture"></div>
+					</a>
+				</div>
+				<div class="column">
+					<a href="http://monkeytype.com/">
+						<div  id="picture2" class="picture"></div>
+					</a>
+				</div>
+				<div class="column">
+					<a href="http://reddit.com/">
+						<div id="picture3" class="picture"></div>
+					</a>
+				</div>
+				<div class="column">
+					<a href="http://deviantart.com/">
+						<div  id="picture4" class="picture"></div>
+					</a>
+				</div>
+				<div class="column">
+					<a href="http://instagram.com/">
+						<div  id="picture5" class="picture"></div>
+					</a>
+				</div>
+				<div class="column">
+					<a href="https://open.spotify.com/playlist/4r05Fu9MDh5KfSuwNp78aU">
+						<div  id="picture6" class="picture"></div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/search.js"></script>
+</html>
